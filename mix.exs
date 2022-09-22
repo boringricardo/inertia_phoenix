@@ -4,8 +4,8 @@ defmodule InertiaPhoenix.MixProject do
   def project do
     [
       app: :inertia_phoenix,
-      version: "0.3.1",
-      elixir: "~> 1.6",
+      version: "0.3.2",
+      elixir: "~> 1.13",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       compilers: [:phoenix] ++ Mix.compilers(),
@@ -33,16 +33,16 @@ defmodule InertiaPhoenix.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:phoenix, "~> 1.3.0 or ~> 1.4.0 or ~> 1.5.3"},
-      {:phoenix_html, ">= 2.0.0 and <= 3.0.0"},
+      {:phoenix, "~> 1.6.0"},
+      {:phoenix_html, "~> 3.2.0"},
       {:plug, ">= 1.5.0 and < 2.0.0", optional: true},
-      {:credo, "~> 1.5.0", only: [:dev, :test]},
+      {:credo, "~> 1.6.0", only: [:dev, :test]},
       # Credo requires jason to exist also in :dev
-      {:jason, "~> 1.0", only: [:dev, :test]},
-      {:ex_doc, "~> 0.23.0", only: :dev},
-      {:plug_cowboy, "~> 2.1", only: [:test]},
-      {:excoveralls, "~> 0.10", only: :test},
-      {:doctor, "~> 0.17.0"}
+      {:jason, "~> 1.4", only: [:dev, :test]},
+      {:ex_doc, "~> 0.28.5", only: :dev},
+      {:plug_cowboy, "~> 2.5", only: [:test]},
+      {:excoveralls, "~> 0.14", only: :test},
+      {:doctor, "~> 0.19.0"}
     ]
   end
 
